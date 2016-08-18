@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html data-ng-app="registration" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>User Registration</title>
+
+</head>
+<body>
+
+    <section data-ng-controller="mainController" class="container">
+        <header>
+            <h1 class="row centerText" data-ng-bind="registerStr"></h1>
+            <p class="row centerText" data-ng-bind="message"></p>
+        </header>
+
+        <form name="regForm" action="register.php" method="post">
+            <div class="form-group row">
+                <label for="userName" class="sr-only col-2" data-ng-bind="userNameLabel"></label>
+                <div class="input-group col-10">
+                    <span class="input-group-addon user-icon"></span>
+                    <input type="text" class="form-control" name="userName" data-ng-model="userName" placeholder="{{userNamePlaceholder}}" id="userName" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="sr-only col-2" data-ng-bind="emailLabel"></label>
+                <div class="input-group col-10">
+                    <span class="input-group-addon email-icon"></span>
+                    <input type="email" class="form-control" name="email" data-ng-model="email" placeholder="{{emailPlaceholder}}" id="email" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="userPassword1" class="sr-only col-2" data-ng-bind="passwordLabel1"></label>
+                <div class="input-group col-10">
+                    <span class="input-group-addon password-icon"></span>
+                    <input type="password" class="form-control" name="" data-ng-model="userPassword1" placeholder="{{passwordPlaceholder1}}" id="userPassword1" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="userPassword2" class="sr-only col-2" data-ng-bind="passwordLabel2"></label>
+                <div class="input-group col-10">
+                    <span class="input-group-addon password-icon"></span>
+                    <input type="password" class="form-control" name="" data-ng-model="userPassword2" placeholder="{{passwordPlaceholder2}}" id="userPassword2" required>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="registerNow" class="sr-only" data-ng-bind="registerLabel"></label>
+                <button type="button" id="registerNow" data-ng-click="register(userName)" class="form-control btn btn-danger col-12 {{isFormValid(userName, email, userPassword1, userPassword2)}}" data-ng-bind="registerBtnStr"></button>
+            </div>
+
+        </form>
+
+    </section>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" defer></script>
+
+<!--//AngularJS-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.min.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-sanitize.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.min.js" defer></script>
+<script src="./js/app.js" defer></script>
+
+
+</body>
+</html>

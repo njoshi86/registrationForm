@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    color: "#000000";
+    font-size: "11px";
+    font-family: "calibry";
+}
+
+body{
+    background-color: skyblue;
+}
+
+.container{
+    width:300px;
+    height: 400px;
+    padding: 3%;
+    margin-top: 2%;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px #666666;
+}
+
+.centerText{
+    text-align: center;
+}
+
+input[type]{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #d3d3d3;
+    border-radius: 0px;
+}
+
+input, button{
+    clear:right;
+}
+
+button{
+    box-shadow: 3px 3px 3px #d3d3d3;
+}
+
+div.input-group{
+    width:100%;
+}
+
+span.input-group-addon{
+    width:30px;
+    height: 30px;
+    border:0;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url("../img/icons.png");
+}
+
+.user-icon{
+    background-position: 0 0;
+}
+
+.email-icon{
+    background-position: 0px -30px;
+}
+
+.password-icon{
+    background-position: 0px -60px;
+}
+
